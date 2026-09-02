@@ -7,9 +7,9 @@ on:
         description: Only verify login and friends without sending
         type: boolean
         default: false
-  # 使用 GitHub Actions 内置定时：每天 12:00（Asia/Shanghai）自动发送
+  # 使用 GitHub Actions 内置定时：每天 16:00（Asia/Shanghai）自动发送
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "0 16 * * *"
       timezone: "Asia/Shanghai"
 
 concurrency:
