@@ -7,10 +7,11 @@ on:
         description: Only verify login and friends without sending
         type: boolean
         default: false
-  # 使用 GitHub Actions 内置定时：每天 16:00（Asia/Shanghai）自动发送
-  schedule:
-    - cron: "0 16 * * *"
-      timezone: "Asia/Shanghai"
+  # 定时已改由 cron-job.org 外部触发（每天 16:00 Asia/Shanghai），
+  # 内置 schedule 注释掉，避免一天触发两次。
+  # schedule:
+  #   - cron: "0 16 * * *"
+  #     timezone: "Asia/Shanghai"
 
 concurrency:
   group: douyin-daily-sender
